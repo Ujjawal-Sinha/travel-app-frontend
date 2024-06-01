@@ -1,2 +1,2 @@
-# Travel-App-Frontend
+# travel-app-frontend
 Travel App Frontend
