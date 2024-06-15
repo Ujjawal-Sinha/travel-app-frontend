@@ -39,10 +39,10 @@ export const Categories = () => {
   }, [numberOfCategoryToShow]);
 
   const handlecategoryclick = (category) => {
-    console.log("category " + category);
+    // console.log("category " + category);
     setHotelCategory(category);
   };
-  console.log(hotelCategory);
+  // console.log(hotelCategory);
 
   return (
     <>
