@@ -1,0 +1,19 @@
+.single-hotel-page{
+    padding: 8rem 4rem 0 7.5rem;
+}
+
+.hotel-name-add{
+    font-size: 1.5rem;
+}
+
+.booking-details {
+    display: flex;
+}
+.hotel-details{
+    margin-left: 7.5rem;
+}
+
+.hotel-price{
+    margin-left: 13.5rem;
+
+}

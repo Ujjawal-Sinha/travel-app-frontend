@@ -1,13 +1,19 @@
-import { Fragment, useEffect, useState } from "react";
-import { Navbar, HotelCard, Categories } from "../../components";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import {
+  Navbar,
+  HotelCard,
+  Categories,
+  SearchStayWithDate,
+} from "../../components";
 import "./Home.css";
-import { useCategory } from "../../context";
+import { useCategory, useDate } from "../../context";
 
 export const Home = () => {
   const [hotels, setHotels] = useState([]);
   const { hotelCategory } = useCategory();
-  console.log("home hotel category " + hotelCategory);
+  const { isSearchModalOpen } = useDate();
+  // console.log(isSeachModalOpen);
 
   useEffect(() => {
     (async () => {
@@ -23,16 +29,17 @@ export const Home = () => {
     })();
   }, [hotelCategory]);
   // console.log(hotelCategory);
+  // console.log(isSeachModalOpen);
 
   return (
-    <Fragment>
+    <div className="relative">
       <Navbar />
       <Categories />
-      <main className="main d-flex align-cneter wrap gap-larger">
+      <main className="main d-flex align-center wrap gap-larger">
         {hotels &&
           hotels.map((hotel) => <HotelCard key={hotel._id} hotel={hotel} />)}
-        {/* <HotelCard /> */}
       </main>
-    </Fragment>
+      {isSearchModalOpen && <SearchStayWithDate />}
+    </div>
   );
 };
