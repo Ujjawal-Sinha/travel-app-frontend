@@ -9,6 +9,7 @@ const initialState = {
   isSearchModalOpen: false,
   isSearchResultOpen: true,
 };
+
 const DateContext = createContext(initialState);
 
 const DateProvider = ({ children }) => {

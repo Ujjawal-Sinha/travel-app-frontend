@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Home, SingleHotel, SearchResults } from "./pages";
+import { Filter } from "./components";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           element={<SingleHotel />}
         />
         <Route path="/hotels/:address" element={<SearchResults />} />
+        <Route path="/filters" element={<Filter />} />
       </Routes>
     </>
   );
