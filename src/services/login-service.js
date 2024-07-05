@@ -4,7 +4,7 @@ export const loginHandler = async (number, password) => {
   try {
     const {
       data: {
-        user: { accessToken: accessToken, username },
+        user: { accessToken, username },
         // user: { accessToken: username },
       },
     } = await axios.post(
