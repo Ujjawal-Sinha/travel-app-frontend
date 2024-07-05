@@ -8,7 +8,7 @@ export const Payment = () => {
   const params = useParams();
   const { id } = params;
 
-  const { guests, dateDispatch, checkInDate, checkOutDate } = useDate();
+  const { guests, checkInDate, checkOutDate } = useDate();
   const numberOfNights =
     checkInDate && checkOutDate
       ? (checkOutDate.getTime() - checkInDate.getTime()) / (1000 * 3600 * 24)
@@ -29,7 +29,7 @@ export const Payment = () => {
         console.error(error);
       }
     })();
-  }, []);
+  }, [id]);
 
   const { image, name, address, state, rating, price } = singleHotel;
 
