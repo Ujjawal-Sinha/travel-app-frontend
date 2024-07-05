@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Home, SingleHotel, SearchResults, Wishlist } from "./pages";
+import { Home, SingleHotel, SearchResults, Wishlist, Payment } from "./pages";
 import { Filter } from "./components";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Route path="/hotels/:address" element={<SearchResults />} />
         <Route path="/filters" element={<Filter />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/confirm-booking/stay/:id" element={<Payment />} />
       </Routes>
     </>
   );
