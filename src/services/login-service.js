@@ -7,10 +7,13 @@ export const loginHandler = async (number, password) => {
         user: { accessToken: accessToken, username },
         // user: { accessToken: username },
       },
-    } = await axios.post("http://localhost:3500/api/auth/login", {
-      number: number,
-      password: password,
-    });
+    } = await axios.post(
+      "https://travel-app-backend-vcgp.onrender.com/api/auth/login",
+      {
+        number: number,
+        password: password,
+      }
+    );
     console.log({ accessToken, username });
     console.log("logged in");
     return { accessToken, username };

@@ -12,7 +12,7 @@ export const SearchResults = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:3500/api/hotels?category=${hotelCategory}`
+          `https://travel-app-backend-vcgp.onrender.com/api/hotels?category=${hotelCategory}`
         );
         // console.log(data);
         setHotels(data);

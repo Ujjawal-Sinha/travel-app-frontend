@@ -26,7 +26,7 @@ export const Categories = () => {
     (async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:3500/api/categories"
+          "https://travel-app-backend-vcgp.onrender.com/api/categories"
         );
         const categoriestoshow = data.slice(
           numberOfCategoryToShow + 6 > data.length
